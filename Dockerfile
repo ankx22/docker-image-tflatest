@@ -1,11 +1,7 @@
 # Use TensorFlow's provided image with GPU support and Jupyter
 FROM tensorflow/tensorflow:latest-gpu-jupyter
 
-# Run updates and install your desired packages
-RUN apt-get update && apt-get install -y \
-    vim \
-    libgl1-mesa-glx \
-    && rm -rf /var/lib/apt/lists/*
+RUN apt update && apt upgrade -y
 
 # Run updates and install your desired packages
 RUN apt-get update && apt-get install -y \
