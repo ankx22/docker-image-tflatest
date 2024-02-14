@@ -32,7 +32,7 @@ RUN apt-get update && apt-get install -y \
 
 # Install Python packages
 RUN python3 -m pip install --upgrade pip
-RUN pip install --no-cache-dir remotezip tqdm opencv-python einops matplotlib numpy
+RUN pip install --no-cache-dir remotezip tqdm opencv-python einops matplotlib numpy seaborn
 
 # Add alias to .bashrc
 RUN echo "alias lt='ls -lrth'" >> ~/.bashrc
